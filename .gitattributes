@@ -64,4 +64,4 @@
 
 *.css linguist-detectable=false
 *.scss linguist-detectable=false
-*.javascript linguist-detectable=false
+*.JavaScript linguist-detectable=false
