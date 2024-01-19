@@ -29,16 +29,16 @@ namespace FoodShop.Models
         public string? AddressLine2 { get; set; }
 
         [Required(ErrorMessage = "Please enter your zip code")]
-        [Display(Name = "Zip code")]
+        [Display(Name = "Post code")]
         [StringLength(10, MinimumLength = 4)]
-        public string ZipCode { get; set; } = string.Empty;
+        public string PostCode { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Please enter your city")]
         [StringLength(50)]
         public string City { get; set; } = string.Empty;
 
         [StringLength(10)]
-        public string? State { get; set; }
+        public string? County { get; set; }
 
         [Required(ErrorMessage = "Please enter your country")]
         [StringLength(50)]
