@@ -1,5 +1,6 @@
 using FoodShop.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,12 +12,17 @@ builder.Services.AddScoped<IShoppingCart, ShoppingCart>(sp => ShoppingCart.GetCa
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+}); ;
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<FoodShopDbContext>(options => {
     options.UseSqlServer(
         builder.Configuration["ConnectionStrings:FoodShopDbContextConnection"]);
 });
+// builder.Services.AddControllers();
+
 
 var app = builder.Build();
 
@@ -36,5 +42,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorPages();
+// app.MapControllers();
 DbInitializer.Seed(app);
 app.Run();

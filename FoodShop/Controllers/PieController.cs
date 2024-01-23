@@ -52,5 +52,10 @@ namespace FoodShop.Controllers
             }
             return View(pie);
         }
+
+        public IActionResult Search()
+        {
+            return View();
+        }
     }
 }
