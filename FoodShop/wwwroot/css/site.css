@@ -488,6 +488,14 @@ progress {
     display: none !important;
 }
 
+/*vvvvvv Classes start here vvvvvv*/
+
+.circle-pic {
+    border: 2.5px solid black;
+    border-radius: 50%;
+}
+
+
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
@@ -11865,3 +11873,4 @@ h6, .h6 {
 .form-label {
     text-transform: uppercase;
 }
+
