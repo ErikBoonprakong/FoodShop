@@ -19,8 +19,17 @@
                             <h5 class="card-text">@line.Amount x @line.Pie.Name</h5>
                             <div class="d-flex justify-content-between">
                                 <h6>@line.Pie.ShortDescription</h6>
-                                <h2>@line.Pie.Price.ToString("c")</h2>
+                                <h2>@line.Pie.Price.ToString("c") + "ERIK3"</h2>
+                                @*--- Model = Pie ---*@
+                                <h4 class="d-grid">
+                                    <a class="btn btn-secondary"
+                                       asp-controller="ShoppingCart"
+                                       asp-action="AddToShoppingCart"
+                                       asp-route-pieId="@Model.PieId"> + Add to cart</a>
+                                </h4>
+                                <h1>ERIK</h1>
                             </div>
+                            <h1>ERIK2</h1>
                         </div>
                     </div>
                 </div>

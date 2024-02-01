@@ -491,7 +491,7 @@ progress {
 /*vvvvvv Classes start here vvvvvv*/
 
 .circle-pic {
-    border: 2.5px solid black;
+    /*border: 2.5px solid black;*/
     border-radius: 50%;
 }
 
