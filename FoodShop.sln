@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodShop", "FoodShop\FoodShop.csproj", "{072A3E24-76D9-411B-81A0-9BA3BD9F3DA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodShopTests", "FoodShopTests\FoodShopTests.csproj", "{3A0D9B56-7B98-4E8A-95FE-A9D7A64FC434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodShopTests", "FoodShopTests\FoodShopTests.csproj", "{3A0D9B56-7B98-4E8A-95FE-A9D7A64FC434}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
