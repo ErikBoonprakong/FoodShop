@@ -19,16 +19,17 @@
                             <h5 class="card-text">@line.Amount x @line.Pie.Name</h5>
                             <div class="d-flex justify-content-between">
                                 <h6>@line.Pie.ShortDescription</h6>
-                                <h2>@line.Pie.Price.ToString("c")</h2>
-                                @*--- Model = Pie ---*@
-                                @*<h4 class="d-grid">
+                                <h2>@line.Pie.Price.ToString("c") <br />
+                                    <a class="btn btn-secondary"
+                                       asp-controller="ShoppingCart"
+                                       asp-action="RemoveFromShoppingCart"
+                                       asp-route-pieId="@line.Pie.PieId"> - </a>
                                     <a class="btn btn-secondary"
                                        asp-controller="ShoppingCart"
                                        asp-action="AddToShoppingCart"
-                                       asp-route-pieId="@Model.PieId"> + Add to cart</a>
-                                </h4>*@
+                                       asp-route-pieId="@line.Pie.PieId"> + </a>
+                                </h2>
                             </div>
-                            <h1>Remove from cart</h1>
                         </div>
                     </div>
                 </div>
@@ -43,8 +44,13 @@
             </div>
             <hr />
             <div class="text-center d-grid">
+                <a class="btn btn-secondary" asp-controller="ShoppingCart" asp-action="ClearShoppingCart"><h4>CLEAR CART</h4></a>
+            </div>
+            <br />
+            <div class="text-center d-grid">
                 <a class="btn btn-secondary" asp-controller="Order" asp-action="Checkout"><h4>Check out now!</h4></a>
             </div>
         </div>
     </div>
 </div>
+

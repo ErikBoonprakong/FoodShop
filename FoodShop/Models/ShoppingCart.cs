@@ -80,6 +80,7 @@ namespace FoodShop.Models
 
         public List<ShoppingCartItem> GetShoppingCartItems()
         {
+            List<ShoppingCartItem> shoppingList = new List<ShoppingCartItem>();
             return ShoppingCartItems ??=
                        _FoodShopDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
                            .Include(s => s.Pie)
